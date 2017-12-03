@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Main page for StudySmart mobile website </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="StudySmartStyle.css"> 
+
+	<script src="StudySmartMain.js"></script>
+
+</head>
+
+<body>
+	<!---
+	<h1> StudySmart </h1>
+
+	<div class="topnav" id="myTopnav">
+		<a href="#home">Home</a>
+		<a href="#news">News</a>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+	</div>
+-->
+
+
+<div id="header">
+	<center> <a href="file:///Users/katmiao/Desktop/StudySmart/StudySmartMain.html" id="logo">StudySmart</a> </center>
+	<ul id="menu">
+		<li><a href="file:///Users/katmiao/Desktop/StudySmart/StudySmartMain.html"><span>Home</span></a></li>
+		<li><a href="file:///Users/katmiao/Desktop/StudySmart/StudySmartAbout.html"><span>About</span></a></li>
+		<li><a href="file:///Users/katmiao/Desktop/StudySmart/StudySmartApp.html"><span>APP!</span></a></li>
+		<li><a href="file:///Users/katmiao/Desktop/StudySmart/StudySmartContact.html"><span>Contact Us</span></a></li>
+
+
+	</ul>
+</div>
+
+<!-- <button onclick="showPowell()">POWELL LIBRARY</button>
+-->
+
+<div>
+
+	<h3> <center> <i>click on a library to see it's activity level: </i> </center></h3>
+
+	<ul> 
+	<input type="button" class="button" value="POWELL LIBRARY" onclick="showPowell()">
+	<input type="button" class="button" value="YOUNG RESEARCH LIBRARY" onclick="showYRL()">
+	<input type="button" class="button" value="LAW LIBRARY" onclick="showLaw()">
+	<input type="button" class="button" value="ROSENFELD MANAGEMENT LIBRARY" onclick="showRosenfeld()">
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div id="powell" style="display:none">
+	<h1>POWELL LIBRARY </h1>
+	<img src="powell1.jpg" align="left" hspace="50">
+	<h2>Current level of activity: </h2>
+	<h2 id='powellActivity'> 
+		0%
+	</h2>
+
+	<!-- <h3>Click <a href = "http://www.library.ucla.edu/powell">here</a> for more info about Powell Library</h3> -->
+	<input type="button" class="button" value="About Powell (hours, events...)" onclick="window.open('http://www.library.ucla.edu/powell')">
+	<input type="button" class="button" value="Reserve a study room" onclick="window.open('http://calendar.library.ucla.edu/booking/powellstudy?_ga=2.182180391.1053452837.1511041619-1604189179.1509433616')">
+	<h3>For more precise data, download the StudySmart App!</h3>
+		<img src="powell2.jpg" align="left" hspace="50">
+
+
+</div>
+
+</div>
+
+<div id="yrl" style="display:none">
+	<h1> YOUNG RESEARCH LIBRARY </h1>
+	<img src="yrl1.png" align="left" hspace="50">
+	<h2> Current level of activity: </h2>
+	<h2 id='yrlActivity'> 
+		0%
+	</h2>
+
+	<input type="button" class="button" value="About YRL (hours, events...)" onclick="window.open('http://www.library.ucla.edu/powell')">
+	<input type="button" class="button" value="Reserve a group study room" onclick="window.open('http://calendar.library.ucla.edu/booking/rescommons?_ga=2.182180391.1053452837.1511041619-1604189179.1509433616')">
+	<input type="button" class="button" value="Reserve a collaboration pod" onclick="window.open('http://calendar.library.ucla.edu/booking/pods?_ga=2.182180391.1053452837.1511041619-1604189179.1509433616')">
+	<h3>For more precise data, download the StudySmart App!</h3>
+		<img src="yrl2.jpg" align="left" hspace="50">
+
+</div>
+
+<div id="law" style="display:none">
+	<h1> LAW LIBRARY </h1>
+	<img src="law1.jpg" align="left" hspace="50">
+	<h2> Current level of activity: </h2>
+
+	<input type="button" class="button" value="About Law Library (hours, events...)" onclick="window.open('https://www.library.ucla.edu/law')">
+	<h3>For more precise data, download the StudySmart App!</h3>
+</div>
+
+<div id="rosenfeld" style="display:none">
+	<h1>ROSENFELD MANAGEMENT LIBRARY </h1>
+	<img src="rosenfeld1.jpg" align="left" hspace="50">
+	<h2> Current level of activity: </h2>
+
+	<input type="button" class="button" value="About (hours, events...)" onclick="window.open('http://www.library.ucla.edu/location/management-library-eugene-maxine-rosenfeld')">
+	<h3>For more precise data, download the StudySmart App!</h3>
+		<img src="rosenfeld2.jpg" align="left" hspace="50">
+
+</div>
+
+<div>
+<!-- <button type="submit" onclick="refresh()">REFRESH</button> -->
+<input type="button" class="button" value="REFRESH" onclick="refresh()">
+<h3 id='refreshTime'><i> </i></h3>
+<!--   	<button type="submit" onclick="writeQuery(2, 2017, 11, 18, 15)">TEST</button>
+ -->
+
+</div>
+
+</body>
+
+</html>
