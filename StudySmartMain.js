@@ -117,6 +117,7 @@ function refresh(){
 
 
 function showPowell (){
+	currentLibrary = 1;
 
 	document.getElementById ("yrl").style.display = "none";
 	document.getElementById ("law").style.display = "none";
@@ -131,6 +132,7 @@ function showPowell (){
 }
 
 function showYRL (){
+	currentLibrary = 2;
 
 	document.getElementById ("powell").style.display = "none";
 	document.getElementById ("law").style.display = "none";
@@ -145,6 +147,7 @@ function showYRL (){
 }
 
 function showLaw (){
+	currentLibrary = 3;
 
 	document.getElementById ("powell").style.display = "none";
 	document.getElementById ("yrl").style.display = "none";
@@ -159,6 +162,7 @@ function showLaw (){
 }
 
 function showRosenfeld (){
+	currentLibrary = 4;
 
 	document.getElementById ("powell").style.display = "none";
 	document.getElementById ("yrl").style.display = "none";
