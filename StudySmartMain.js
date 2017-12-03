@@ -18,7 +18,7 @@ function writeQuery(lib){
 	query += "month="+(d.getMonth()+1)+"&";
 	query += "date="+d.getDate()+"&";
 	query += "hours="+d.getHours();
-	alert(query);
+	//alert(query);
 	return query;
 
 }
@@ -53,7 +53,7 @@ function refresh(){
 				
 		        var response = JSON.parse(xhr.responseText);
 		        var activity = response.overall;
-		        alert(activity);
+		        //alert(activity);
 		        var d = new Date();
 		        
 		        if (currentLibrary == 1){
