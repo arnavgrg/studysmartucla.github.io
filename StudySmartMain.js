@@ -6,8 +6,8 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 //----------------------------------------------
 
-var currentLibrary
-var numLibraries = 2;
+var currentLibrary = 1;
+var numLibraries = 4;
 
 function writeQuery(lib){
 	// EXAMPLE => ?library=2&year=2017&month=11&date=18&hours=15
@@ -31,10 +31,9 @@ var xhr = new XMLHttpRequest();
 function refresh(){
 
 	//for (i = 1; i <= numLibraries; i++){
-		
-		var i = 2;
+		//var i = 2;
 
-		var url = "https://demo-studysmart.herokuapp.com/library/activity/"+writeQuery(i);
+		var url = "https://demo-studysmart.herokuapp.com/library/activity/"+writeQuery(currentLibrary);
 		
 		console.log(url);
 
@@ -55,14 +54,23 @@ function refresh(){
 		        var response = JSON.parse(xhr.responseText);
 		        var activity = response.overall;
 		        alert(activity);
-		        
-		        if (i == 1){
-		        	document.getElementById("powellActivity").innerHTML = activity+"%";
-		        } else if (i == 2){
-		        	document.getElementById("yrlActivity").innerHTML = activity+"%";
-		        }
 		        var d = new Date();
-		        document.getElementById("refreshTime").innerHTML = "refreshed at: "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes();
+		        
+		        if (currentLibrary == 1){
+		        	document.getElementById("powellActivity").innerHTML = activity+"%";
+		        	document.getElementById("powellTime").innerHTML = "refreshed at: "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes();
+		        } else if (currentLibrary == 2){
+		        	document.getElementById("yrlActivity").innerHTML = activity+"%";
+		        	document.getElementById("yrlTime").innerHTML = "refreshed at: "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes();
+		        } else if (currentLibrary == 3){
+		        	document.getElementById("lawActivity").innerHTML = activity+"%";
+		        	document.getElementById("lawTime").innerHTML = "refreshed at: "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes();
+		        } else if (currentLibrary == 4){
+		        	document.getElementById("rosenfeldActivity").innerHTML = activity+"%";
+		        	document.getElementById("rosenfeldTime").innerHTML = "refreshed at: "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes();
+		        }
+		        
+		        
 
 		        //alert("activity: "+activity);
 		    }
