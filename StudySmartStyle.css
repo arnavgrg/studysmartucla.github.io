@@ -18,13 +18,16 @@ h1, h2, h3{
 th, td{
   font-family: 'Open Sans', sans-serif;
   color: #555;
+  text-align: center;
 }
 
 img{
     /*max-width:450px;
     max-height:450px;*/
     max-width:90%;
-    height:auto;
+    max-height: 50%;
+    margin: 20px;
+    /*height:auto;*/
 }
 
 
