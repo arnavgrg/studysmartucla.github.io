@@ -50,10 +50,13 @@ function refresh(){
 			if (xhr.readyState == 4 && xhr.status == 200) {
 				//alert("Processing!");
 				//alert(xhr.responseText);
-				
-		        var response = JSON.parse(xhr.responseText);
-		        var activity = response.overall;
-		        //alert(activity);
+				var regex = new RegExp("[0-9]+");
+				var response = regex.exec(xhr.responseText);
+				var activity = response[0];
+		        //var response = JSON.parse(xhr.responseText);
+		        //alert(response);
+		        //var activity = response.overall;
+		        alert(activity);
 		        var d = new Date();
 		        
 		        if (currentLibrary == 1){
