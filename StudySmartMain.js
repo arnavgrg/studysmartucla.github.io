@@ -56,7 +56,7 @@ function refresh(){
 		        //var response = JSON.parse(xhr.responseText);
 		        //alert(response);
 		        //var activity = response.overall;
-		        alert(activity);
+		        //alert(activity);
 		        var d = new Date();
 		        
 		        if (currentLibrary == 1){

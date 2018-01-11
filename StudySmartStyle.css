@@ -22,12 +22,12 @@ th, td{
 }
 
 img{
-    /*max-width:450px;
-    max-height:450px;*/
-    max-width:90%;
-    max-height: 50%;
-    margin: 20px;
+    max-width:50%;
+    max-height:50%;
+    /*max-width:50%;
+    max-height: 50%;*/
     /*height:auto;*/
+    margin: 20px;
 }
 
 
